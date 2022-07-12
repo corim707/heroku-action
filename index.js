@@ -55,10 +55,9 @@ function addBuildpacks({buildpacks}){
 }
 
 function addDynamicFiles({ dynamicFiles }){
-  if(dynamicFiles){
-    execComm(`git add -A . && git commit -m "Added dynamic files"`);
-    console.log("Added dynamic files");
-  }
+  if(!dynamicFiles) return;
+  execComm(`git add --force -A ${dynamicFiles} && git commit -m "Added dynamic files"`);
+  console.log("Added dynamic files");
 }
 
 function addConfigs({ app_name, env_file, appdir }){
