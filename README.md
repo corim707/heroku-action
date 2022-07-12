@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: CDNievas/heroku-action@v1.0 # This is the action
+      - uses: corim707/heroku-action@v1.0 # This is the action
         with:
           heroku_email: "example@email.com"
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
@@ -57,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: CDNievas/heroku-action@v1.0 # This is the action
+      - uses: corim707/heroku-action@v1.0 # This is the action
         with:
           heroku_email: "example@email.com"
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
